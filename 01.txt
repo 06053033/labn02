@@ -1,0 +1,42 @@
+// Lab02_1
+const byte startPin = 7;
+
+const byte endPin = 14;
+byte i;
+byte n;
+void setup() 
+{
+// 將每個 Pin 設定成輸出
+for (byte i = startPin; i<= endPin; i++) 
+{
+pinMode(i, OUTPUT);
+}
+}
+
+void loop()
+  {
+for (i=startPin;i<=endPin;i++)
+  digitalWrite(i, LOW);
+  
+  for (i=startPin;i<=endPin;i++)
+  digitalWrite(i, LOW);
+    for (i=endPin;i>=startPin;i--)
+{
+
+digitalWrite(i, HIGH);
+  delay(100);
+
+digitalWrite(i,   LOW );
+  delay(100);  
+  }
+  
+  for (i=startPin;i<=endPin;i++)
+{
+
+digitalWrite(i, HIGH);
+  delay(100);
+
+digitalWrite(i,   LOW );
+  delay(100);  
+} 
+}
